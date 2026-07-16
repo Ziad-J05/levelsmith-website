@@ -1,0 +1,23 @@
+---
+interface Props {
+    name: string;
+    role: string;
+    email?: string;
+    phone?: string;
+    website?: string;
+}
+const { name, role, email = null, phone = null, website = null } = Astro.props;
+---
+
+<div class="flex flex-col gap-[4px] border-1 border-primary rounded-lg p-[8px]">
+    <div class="flex flex-row gap-[8px] items-baseline">
+        <h3 class="text-xl font-medium">{name}</h3>
+        <p class="text-secondary text-lg">{role}</p>
+    </div>
+    <hr class="h-[1px] border-0 bg-secondary" />
+    <div class="flex flex-row gap-[8px] items-baseline">
+        <a class="underline text-secondary hover:text-primary" href={email}>{email}</a>
+        <a class="underline text-secondary hover:text-primary" href={phone}>{phone}</a>
+        <a class="underline text-secondary hover:text-primary" href={website}>{website}</a>
+    </div>
+</div>
