@@ -4,38 +4,12 @@ import { Font } from "astro:assets";
 import SectionHeading from "../components/SectionHeading.astro";
 import ContactCard from "../components/ContactCard.astro";
 import ContactCardSmall from "../components/ContactCardSmall.astro";
-import Footer from "../components/Footer.astro";
-import LinkButton from "../components/LinkButton.astro";
-import Navbar from "../components/Navbar.astro";
 import ProductCard from "../components/ProductCard.astro";
+import HomePageLayout from "../layouts/HomePageLayout.astro";
 ---
 
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<Font cssVariable="--font-ibm-plex-mono" />
-		<meta name="generator" content={Astro.generator} />
-		<title>LevelSmith Labs</title>
-	</head>
-	<body class="bg-medium text-primary">
-		<!-- Navigation Bar -->
-		<Navbar />
-		<!-- Main Content -->
-		<main>
-			<!-- Hero -->
-			<div class="bg-dark rounded-b-4xl flex flex-col gap-[16px] px-[40px] pt-[64px] pb-[32px]">
-				<h1 class="text-5xl/[56px] font-bold uppercase tracking-wide">Welcome to<br>LevelSmith Labs</h1>
-				<ul class="uppercase">
-					<li>LevelSmith: Foundry 2D</li>
-					<li>Release 1.0</li>
-				</ul>
-				<LinkButton name="Download" />
-			</div>
-			<!-- Section 1 -->
+<HomePageLayout>
+	<!-- Section 1 -->
 			<SectionHeading title="Our Software" />
 			<div
 				class="flex flex-col gap-[24px] justify-center items-center w-full"
@@ -53,8 +27,4 @@ import ProductCard from "../components/ProductCard.astro";
 					<ContactCardSmall name="Chris Hamam" role="Design Lead" email="xyz@rit.edu" />
 				</div>
 			</div>
-		</main>
-		<!-- Footer -->
-		<Footer/>
-	</body>
-</html>
+</HomePageLayout>
