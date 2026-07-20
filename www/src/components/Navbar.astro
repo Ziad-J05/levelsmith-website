@@ -14,7 +14,27 @@
         /></a
     >
     <div class="flex flex-row gap-[24px] h-fit">
-        <a class="transition-colors text-primary hover:text-accent-light active:text-accent-medium" href="/foundry2d/">Software</a>
-        <a class="transition-colors text-primary hover:text-accent-light active:text-accent-medium" href="/about">About</a>
+        <div class="relative inline-block dropdown">
+            <a
+                class="transition-colors text-primary hover:text-accent-light active:text-accent-medium"
+                href="/foundry2d/">Software</a
+            >
+            <div class="hidden dropdown-menu">
+                <div
+                    class="absolute right-0 w-56 h-56 mt-2 origin-top-right bg-white"
+                >
+                </div>
+            </div>
+        </div>
+        <a
+            class="transition-colors text-primary hover:text-accent-light active:text-accent-medium"
+            href="/about">About</a
+        >
     </div>
 </nav>
+
+<style>
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+</style>
