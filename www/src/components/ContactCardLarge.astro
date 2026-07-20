@@ -20,7 +20,7 @@ const {
 ---
 
 <div
-	class="flex flex-col gap-[4px] border-1 border-primary rounded-lg px-[8px] pt-[8px] pb-[16px] w-sm h-2xl"
+	class="flex flex-col gap-[4px] border-1 border-primary rounded-lg px-[8px] pt-[8px] pb-[16px] w-sm h-fit h-2xl"
 >
 	<img src={img}/>
 	<hr class="h-[1px] border-0 bg-secondary" />
@@ -30,11 +30,11 @@ const {
     </div>
 	<p>{description}</p>
 	<div class="flex flex-row gap-[16px]">
-		<a class="underline text-secondary hover:text-primary" href={email}
+		<a class="hover:underline text-primary" href={email}
 			>{email}</a
-		><a class="underline text-secondary hover:text-primary" href={phone}
+		><a class="hover:underline text-primary" href={phone}
 			>{phone}</a
-		><a class="underline text-secondary hover:text-primary" href={website}
+		><a class="hover:underline text-primary" href={website}
 			>{website}</a
 		>
 	</div>
