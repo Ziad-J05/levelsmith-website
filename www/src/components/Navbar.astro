@@ -15,15 +15,17 @@
     >
     <div class="flex flex-row gap-[24px] h-fit">
         <div class="relative inline-block dropdown">
-            <a
-                class="transition-colors text-primary hover:text-accent-light active:text-accent-medium"
-                href="/foundry2d/">Software</a
+            <span
+                class="cursor-pointer transition-colors text-primary hover:text-accent-light active:text-accent-medium pb-[12px]"
+                >Software</span
             >
-            <div class="hidden dropdown-menu">
-                <div
-                    class="absolute right-0 w-56 h-56 mt-2 origin-top-right bg-white"
+            <div
+                class="hidden dropdown-menu absolute left-[-8px] w-fit min-w-[8rem] h-fit mt-[6px] py-[8px] px-[8px] rounded-lg origin-top-left bg-medium shadow-lg"
+            >
+                <a
+                    class="transition-colors text-primary hover:text-accent-light active:text-accent-medium"
+                    href="/foundry2d/">Foundry 2D</a
                 >
-                </div>
             </div>
         </div>
         <a
@@ -36,5 +38,9 @@
 <style>
     .dropdown:hover .dropdown-menu {
         display: block;
+    }
+
+    .dropdown:hover > span {
+        color: var(--color-accent-light);
     }
 </style>
