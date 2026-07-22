@@ -7,11 +7,18 @@ const { name, description, img, href } = Astro.props;
 <div
     class="bg-accent rounded-md flex flex-row items-center gap-[16px] rounded-lg py-[8px] px-[16px] w-fit h-fit"
 >
-    <img class="max-h-[48px] max-w-[48px]" src={img} alt="Product logo" />
-    <div class="self-stretch border-l-[1px] border-primary"></div>
-    <div class="flex flex-col gap-[4px]">
-        <h3 class="text-xl font-medium">{name}</h3>
-        <p>{description}</p>
+    <img class="hidden md:inline-block max-h-[48px] max-w-[48px]" src={img} alt="Product logo" />
+    <div class="hidden md:block self-stretch border-l-[1px] border-primary"></div>
+    <div class="flex flex-col md:flex-row items-center gap-[8px] md:gap-[16px]">
+        <div class="flex flex-col gap-[4px] w-full">
+            <h3 class="text-xl font-medium">{name}</h3>
+            <div class="block md:hidden self-stretch border-t-[1px] border-primary"></div>
+            <p class="hidden md:inline-block">{description}</p>
+        </div>
+        <div class="flex gap-[8px] items-center md:block">
+            <p class="hidden sm:inline-block md:hidden">{description}</p>
+            <LinkButton name="Learn More" href={href} />
+        </div>
     </div>
-    <LinkButton name="Learn More" href={href} />
+    
 </div>
