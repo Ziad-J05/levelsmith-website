@@ -4,6 +4,8 @@ import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
 export default defineConfig({
+    site: 'https://Ziad-J05.github.io',
+    base: '/levelsmith-website',
     fonts: [{
     provider: fontProviders.local(),
     name: "IBM Plex Mono",
