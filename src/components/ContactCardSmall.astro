@@ -16,8 +16,8 @@ const { name, role, email = null, phone = null, website = null } = Astro.props;
     </div>
     <hr class="h-[1px] border-0 bg-secondary" />
     <div class="flex flex-row gap-[8px] items-baseline">
-        <a class="underline text-secondary hover:text-primary" href={email}>{email}</a>
-        <a class="underline text-secondary hover:text-primary" href={phone}>{phone}</a>
-        <a class="underline text-secondary hover:text-primary" href={website}>{website}</a>
+        <a class="hover:text-primary active:text-accent text-accent-light" href={email}>{email}</a>
+        <a class="hover:text-primary active:text-accent text-accent-light" href={phone}>{phone}</a>
+        <a class="hover:text-primary active:text-accent text-accent-light" href={website}>{website}</a>
     </div>
 </div>

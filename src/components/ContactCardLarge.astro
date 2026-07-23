@@ -1,5 +1,5 @@
 ---
-import placeholderImage from '../../src/assets/portrait-placeholder.svg'
+import placeholderImage from "../../src/assets/portrait-placeholder.svg";
 
 interface Props {
 	img?: string;
@@ -24,21 +24,26 @@ const {
 <div
 	class="flex flex-row md:flex-col gap-[4px] border-1 border-primary rounded-lg px-[8px] pt-[8px] pb-[8px] md:pb-[16px] w-sm h-fit h-2xl overflow-hidden"
 >
-	<img class="md:w-full" src={img}/>
+	<img class="md:w-full" src={img} />
 	<hr class="h-[1px] border-0 bg-secondary" />
 	<div class="flex flex-col w-full">
-		<div class="flex flex-col md:flex-row gap-[4px] md:gap-[8px] items-baseline">
+		<div
+			class="flex flex-col md:flex-row gap-[4px] md:gap-[8px] items-baseline"
+		>
 			<h3 class="text:xl md:text-2xl font-medium">{name}</h3>
 			<p class="text-secondary md:text-lg">{role}</p>
 		</div>
 		<p>{description}</p>
 		<div class="flex flex-row flex-wrap gap-[1px] md:gap-x-[16px]">
-			<a class="hover:text-primary active:text-accent text-accent-light inline-block truncate" href={email}
-				>{email}</a
-			><a class="hover:text-primary active:text-accent text-accent-light inline-block truncate" href={phone}
-				>{phone}</a
-			><a class="hover:text-primary active:text-accent text-accent-light inline-block truncate max-w-full" href={website}
-				>{website}</a
+			<a
+				class="hover:text-primary active:text-accent text-accent-light inline-block truncate"
+				href={email}>{email}</a
+			><a
+				class="hover:text-primary active:text-accent text-accent-light inline-block truncate"
+				href={phone}>{phone}</a
+			><a
+				class="hover:text-primary active:text-accent text-accent-light inline-block truncate max-w-full"
+				href={website}>{website}</a
 			>
 		</div>
 	</div>

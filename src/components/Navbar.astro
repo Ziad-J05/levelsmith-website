@@ -1,6 +1,6 @@
 ---
-import logoImage from '../../src/assets/levelsmith-icon.svg'
-import logoTextImage from '../../src/assets/levelsmith-logo-text-white.png'
+import logoImage from "../../src/assets/levelsmith-icon.svg";
+import logoTextImage from "../../src/assets/levelsmith-logo-text-white.png";
 ---
 
 <nav
@@ -11,12 +11,11 @@ import logoTextImage from '../../src/assets/levelsmith-logo-text-white.png'
         href="/levelsmith-website/"
         ><img class="h-[32px]" src={logoImage.src} />
         <img class="h-[0px] md:h-[32px]" src={logoTextImage.src} />
-        </a
-    >
+    </a>
     <div class="flex flex-row gap-[24px] h-fit">
         <div class="relative inline-block dropdown">
             <button
-                class="dropdown-button cursor-pointer transition-colors text-primary hover:text-accent-light active:text-accent-medium "
+                class="dropdown-button cursor-pointer transition-colors text-primary hover:text-accent-light active:text-accent-medium"
                 >Software</button
             >
             <div
@@ -43,5 +42,4 @@ import logoTextImage from '../../src/assets/levelsmith-logo-text-white.png'
     .dropdown:hover > span {
         color: var(--color-accent-light);
     }
-
 </style>
