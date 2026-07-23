@@ -1,118 +1,39 @@
 ---
+// 1. Style Sheets
 import "../styles/global.css";
-import { Font } from "astro:assets";
+// 2. Layouts
+import Layout from "../layouts/Layout.astro";
+// 3. Components
 import SectionHeading from "../components/SectionHeading.astro";
 import ContactCardLarge from "../components/ContactCardLarge.astro";
-import "../styles/global.css";
-import Footer from "../components/Footer.astro";
-import LinkButton from "../components/LinkButton.astro";
-import Navbar from "../components/Navbar.astro";
 ---
 
-<!doctype html>
-<html lang="en" class="scroll-smooth">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/svg+xml" href="/levelsmith-website/favicon.svg" />
-        <link rel="icon" href="/levelsmith-website/favicon.ico" />
-        <Font cssVariable="--font-ibm-plex-mono" />
-        <meta name="generator" content={Astro.generator} />
-        <title>LevelSmith Labs</title>
-    </head>
-    <body class="bg-medium text-primary">
-        <!-- Navigation Bar -->
-        <Navbar />
-        <!-- Main Content -->
-        <main>
-            <!-- Heading -->
-            <div
-                class="rounded-b-4xl flex flex-col gap-[8px] px-[20px] md:px-[40px] pt-[72px] pb-[16px] md:pb-[32px]
-            bg-dark bg-[linear-gradient(to_right,#222222_2px,transparent_1px),linear-gradient(to_bottom,#222222_2px,transparent_1px)] bg-size-[64px_64px]"
-            >
-                <div class="hidden md:flex flex-row gap-[16px]">
-                    <a class="hover:underline text-primary" href="/levelsmith-website/">Home</a>
-                    <p class="text-secondary">&gt;</p>
-                    <p class="text-secondary">About</p>
-                </div>
-                <h1 class="text-3xl md:text-5xl font-bold uppercase text-center md:text-left tracking-wide">
-                    About
-                </h1>
-            </div>
-            <div class="w-fill h-fit px-[40px]">
-                <!-- Body -->
-                <div
-                    class="my-[48px] flex flex-col gap-[12px] mx-auto max-w-7xl"
-                >
-                    <p>
-                        LevelSmith Labs is a team dedicated to making quality
-                        software for developers of all kinds, from the absolute
-                        beginners to industry veterans. We are driven by our
-                        love for video games, and we strongly believe that this
-                        shines through in our work.
-                    </p>
-                </div>
+<Layout title="About">
+    <div class="my-[48px] flex flex-col gap-[12px] mx-auto max-w-7xl">
+        <p>
+            LevelSmith Labs is a team dedicated to making quality software for
+            developers of all kinds, from the absolute beginners to industry
+            veterans. We are driven by our love for video games, and we strongly
+            believe that this shines through in our work.
+        </p>
+    </div>
 
-                <SectionHeading title="The Team" />
-                <div
-                    class="flex flex-wrap flex-row gap-[16px] my-[48px] justify-center w-full h-fit"
-                >
-                    <ContactCardLarge
-                        name="Sten McKinzie"
-                        role="Faculty Lead"
-                    />
-                    <ContactCardLarge
-                        name="Bee Morse"
-                        role="Producer"
-                    />
-                    <ContactCardLarge
-                        name="Theo Ruefli"
-                        role="Tech Lead"
-                    />
-                    <ContactCardLarge
-                        name="Chris Hamam"
-                        role="Design Lead"
-                    />
-                    <ContactCardLarge
-                        name="Andrew S. Hernandez"
-                        role="Developer"
-                    />
-                    <ContactCardLarge
-                        name="Ben Haines"
-                        role="Developer"
-                    />
-                    <ContactCardLarge
-                        name="Deacon Mansfield"
-                        role="Developer"
-                    />
-                    <ContactCardLarge
-                        name="Evan Calkins"
-                        role="Developer"
-                    />
-                    <ContactCardLarge
-                        name="Jack Xue"
-                        role="Developer"
-                    />
-                    <ContactCardLarge
-                        name="Steven Poore"
-                        role="Developer"
-                    />
-                    <ContactCardLarge
-                        name="Tyler Christ"
-                        role="Developer"
-                    />
-                    <ContactCardLarge
-                        name="Zay Arriaga"
-                        role="Developer"
-                    />
-                    <ContactCardLarge
-                        name="Ziad Jaafar"
-                        role="Developer"
-                    />
-                </div>
-            </div>
-        </main>
-        <!-- Footer -->
-        <Footer />
-    </body>
-</html>
+    <SectionHeading title="The Team" />
+    <div
+        class="flex flex-wrap flex-row gap-[16px] my-[48px] justify-center w-full h-fit"
+    >
+        <ContactCardLarge name="Sten McKinzie" role="Faculty Lead" />
+        <ContactCardLarge name="Bee Morse" role="Producer" />
+        <ContactCardLarge name="Theo Ruefli" role="Tech Lead" />
+        <ContactCardLarge name="Chris Hamam" role="Design Lead" />
+        <ContactCardLarge name="Andrew S. Hernandez" role="Developer" />
+        <ContactCardLarge name="Ben Haines" role="Developer" />
+        <ContactCardLarge name="Deacon Mansfield" role="Developer" />
+        <ContactCardLarge name="Evan Calkins" role="Developer" />
+        <ContactCardLarge name="Jack Xue" role="Developer" />
+        <ContactCardLarge name="Steven Poore" role="Developer" />
+        <ContactCardLarge name="Tyler Christ" role="Developer" />
+        <ContactCardLarge name="Zay Arriaga" role="Developer" />
+        <ContactCardLarge name="Ziad Jaafar" role="Developer" />
+    </div>
+</Layout>

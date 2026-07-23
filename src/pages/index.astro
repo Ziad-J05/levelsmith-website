@@ -1,11 +1,13 @@
 ---
+// 1. Style Sheets
 import "../styles/global.css";
-import { Font } from "astro:assets";
+// 2. Layouts
+import HomePageLayout from "../layouts/HomePageLayout.astro";
+// 3. Components
 import SectionHeading from "../components/SectionHeading.astro";
 import ContactCard from "../components/ContactCard.astro";
-import ContactCardSmall from "../components/ContactCardSmall.astro";
 import ProductCard from "../components/ProductCard.astro";
-import HomePageLayout from "../layouts/HomePageLayout.astro";
+// 4. Assets
 import logoF2dImage from "../../src/assets/f2d-white.png";
 ---
 
@@ -13,8 +15,15 @@ import logoF2dImage from "../../src/assets/f2d-white.png";
 	<!-- Section 1 -->
 	<SectionHeading title="Our Software" />
 	<div class="flex flex-col gap-[24px] justify-center items-center w-full">
-		<ProductCard name="LevelSmith: Foundry 2D" img={logoF2dImage.src} description="Release 1.0" href="/levelsmith-website/foundry2d/"/>
-		<p class="text-xl font-medium text-center">More software coming soon!</p>
+		<ProductCard
+			name="LevelSmith: Foundry 2D"
+			img={logoF2dImage.src}
+			description="Release 1.0"
+			href="/levelsmith-website/foundry2d/"
+		/>
+		<p class="text-xl font-medium text-center">
+			More software coming soon!
+		</p>
 	</div>
 	<!-- Section 2 -->
 	<SectionHeading title="Contact" />
@@ -26,18 +35,14 @@ import logoF2dImage from "../../src/assets/f2d-white.png";
 			phone="555-555-5555"
 			website="www.xyzrit"
 		/>
-		<ContactCard 
-			name="Bee Morse" 
-			role="Producer" 
-			email="xyz@rit.edu" 
+		<ContactCard
+			name="Bee Morse"
+			role="Producer"
+			email="xyz@rit.edu"
 			phone="555-555-5555"
 			website="www.xyzrit"
 		/>
-		<ContactCard 
-			name="Theo Ruefli" 
-			role="Tech Lead" 
-			
-		/>
+		<ContactCard name="Theo Ruefli" role="Tech Lead" />
 		<ContactCard
 			name="Chris Hamam"
 			role="Design Lead"

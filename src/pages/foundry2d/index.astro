@@ -1,118 +1,80 @@
 ---
+// 1. Style Sheets
 import "../../styles/global.css";
-import { Font } from "astro:assets";
-import SectionHeading from "../../components/SectionHeading.astro";
-import ContactCardLarge from "../../components/ContactCardLarge.astro";
-import Footer from "../../components/Footer.astro";
+// 2. Layouts
+import Layout from "../../layouts/Layout.astro";
+// 3. Components
 import LinkButton from "../../components/LinkButton.astro";
-import Navbar from "../../components/Navbar.astro";
-// images
+import SectionHeading from "../../components/SectionHeading.astro";
+// 4. Assets
 import screencapF2dImage2 from "../../../src/assets/f2d-screencap-2.webp";
 import screencapF2dImage3 from "../../../src/assets/f2d-screencap-3.webp";
 import screencapF2dImage4 from "../../../src/assets/f2d-screencap-4.webp";
 ---
 
-<!doctype html>
-<html lang="en" class="scroll-smooth">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width" />
-        <link rel="icon" type="image/svg+xml" href="/levelsmith-website/favicon.svg" />
-        <link rel="icon" href="/levelsmith-website/favicon.ico" />
-        <Font cssVariable="--font-ibm-plex-mono" />
-        <meta name="generator" content={Astro.generator} />
-        <title>LevelSmith Labs</title>
-    </head>
-    <body class="bg-medium text-primary">
-        <!-- Navigation Bar -->
-        <Navbar />
-        <!-- Main Content -->
-        <main>
-            <!-- Heading -->
-            <div
-                class="rounded-b-4xl flex flex-col gap-[8px] px-[20px] md:px-[40px] pt-[72px] pb-[16px] md:pb-[32px]
-            bg-dark bg-[linear-gradient(to_right,#222222_2px,transparent_1px),linear-gradient(to_bottom,#222222_2px,transparent_1px)] bg-size-[64px_64px]"
-            >
-                <div class="hidden md:flex flex-row gap-[16px]">
-                    <a
-                        class="hover:underline text-primary"
-                        href="/levelsmith-website/">Home</a
-                    >
-                    <p class="text-secondary">&gt;</p>
-                    <p class="text-secondary">LevelSmith: Foundry 2D</p>
-                </div>
-                
-                <h1 class="text-3xl md:text-5xl font-bold uppercase text-center md:text-left tracking-wide">
-                    LevelSmith: Foundry 2D
-                </h1>
+<Layout title="LevelSmith: Foundry 2D">
+    <div
+        class="h-fit sm:h-[20rem] mt-[48px] flex flex-row justify-center gap-[12px] overflow-x-hidden"
+    >
+        <img src={screencapF2dImage2.src} class="w-full object-cover" />
+        <img
+            src={screencapF2dImage3.src}
+            class="hidden md:inline-block w-full object-cover h-full"
+        />
+        <img
+            src={screencapF2dImage4.src}
+            class="hidden md:inline-block w-full object-cover"
+        />
+    </div>
+
+    <div class="flex flex-col-reverse md:flex-col">
+        <div class="my-[48px] flex flex-col gap-[12px] mx-auto max-w-7xl">
+            <p>
+                Foundry2D is an open source 2D platformer prototyping tool
+                focused on rapid iteration, maximum customization, and ease of
+                use. Use eight unique tiles, four different enemies, coins, and
+                checkpoints to construct playable 2D platformer levels.
+            </p>
+            <p><b>Then, modify everything!</b></p>
+            <p>
+                Easily change player movement, enemy behaviors, camera settings,
+                and every single asset! All textures, animations, and audio can
+                be replaced with a press of a button. Share your levels with
+                others, bringing all your customization with it.
+            </p>
+        </div>
+
+        <div>
+            <SectionHeading title="Download" />
+            <div class="flex flex-row w-full h-fit justify-center gap-[16px]">
+                <LinkButton
+                    name="Itch.io"
+                    href="https://levelsmith-labs.itch.io/foundry2d"
+                />
+                <LinkButton
+                    name="Github"
+                    href="https://github.com/superwhack/levelsmith-platformer"
+                />
             </div>
-            <div class="w-fill h-fit px-[40px]">
-                <!-- Body -->
+        </div>
+    </div>
 
-                <div class="h-fit sm:h-[20rem] mt-[48px] flex flex-row justify-center gap-[12px] overflow-x-hidden">
-                    <img src={screencapF2dImage2.src} class="w-full object-cover" />
-                    <img src={screencapF2dImage3.src} class="hidden md:inline-block w-full object-cover h-full" />
-                    <img src={screencapF2dImage4.src} class="hidden md:inline-block w-full object-cover" />
-                </div>
-
-                <div class="flex flex-col-reverse md:flex-col">
-                <div class="my-[48px] flex flex-col gap-[12px] mx-auto max-w-7xl">
-                    <p>
-                        Foundry2D is an open source 2D platformer prototyping
-                        tool focused on rapid iteration, maximum customization,
-                        and ease of use. Use eight unique tiles, four different
-                        enemies, coins, and checkpoints to construct playable 2D
-                        platformer levels.
-                    </p>
-                    <p><b>Then, modify everything!</b></p>
-                    <p>
-                        Easily change player movement, enemy behaviors, camera
-                        settings, and every single asset! All textures,
-                        animations, and audio can be replaced with a press of a
-                        button. Share your levels with others, bringing all your
-                        customization with it.
-                    </p>
-                </div>
-
-                <div>
-                    <SectionHeading title="Download" />
-                    <div
-                        class="flex flex-row w-full h-fit justify-center gap-[16px]"
-                    >
-                        <LinkButton
-                            name="Itch.io"
-                            href="https://levelsmith-labs.itch.io/foundry2d"
-                        />
-                        <LinkButton
-                            name="Github"
-                            href="https://github.com/superwhack/levelsmith-platformer"
-                        />
-                    </div>
-                </div>
-                </div>
-
-                <SectionHeading title="Credits" />
-                <div class="my-[48px] flex flex-col gap-[12px] mx-auto max-w-7xl">
-                    <p>
-                        This project was developed by a team of twelve students
-                        as an entrepreneurial co-op through Rochester Institute
-                        of Technology.
-                    </p>
-                    <p><b>Producer:</b> Bee Morse</p>
-                    <p><b>Tech Lead:</b> Theo Ruefli</p>
-                    <p>
-                        <b>Tech Team:</b> Andrew Hernandez, Ben Haines, Jack Xue,
-                        Steven Poore, Theo Ruefli, Zay Arriaga
-                    </p>
-                    <p><b>Design Lead:</b> Chris Hamam</p>
-                    <p>
-                        <b>Design Team:</b> Chris Hamam, Deacon Mansfield, Evan Calkins,
-                        Tyler Christ, Ziad Jaafar
-                    </p>
-                </div>
-            </div>
-        </main>
-        <!-- Footer -->
-        <Footer />
-    </body>
-</html>
+    <SectionHeading title="Credits" />
+    <div class="my-[48px] flex flex-col gap-[12px] mx-auto max-w-7xl">
+        <p>
+            This project was developed by a team of twelve students as an
+            entrepreneurial co-op through Rochester Institute of Technology.
+        </p>
+        <p><b>Producer:</b> Bee Morse</p>
+        <p><b>Tech Lead:</b> Theo Ruefli</p>
+        <p>
+            <b>Tech Team:</b> Andrew Hernandez, Ben Haines, Jack Xue, Steven Poore,
+            Theo Ruefli, Zay Arriaga
+        </p>
+        <p><b>Design Lead:</b> Chris Hamam</p>
+        <p>
+            <b>Design Team:</b> Chris Hamam, Deacon Mansfield, Evan Calkins, Tyler
+            Christ, Ziad Jaafar
+        </p>
+    </div>
+</Layout>
