@@ -1,0 +1,26 @@
+---
+import "../styles/global.css";
+
+interface Props {
+    title: string;
+}
+const { title } = Astro.props;
+---
+
+<div
+    class="rounded-b-4xl flex flex-col gap-[8px] px-[20px] md:px-[40px] pt-[72px] md:pt-[96px] pb-[16px] md:pb-[32px]
+            bg-dark bg-[linear-gradient(to_right,#222222_2px,transparent_1px),linear-gradient(to_bottom,#222222_2px,transparent_1px)] bg-size-[64px_64px]"
+>
+    <!-- 
+        <div class="hidden md:flex flex-row gap-[16px]">
+            <a class="hover:underline text-primary" href="/levelsmith-website/">Home</a>
+            <p class="text-secondary">&gt;</p>
+            <p class="text-secondary">{title}</p>
+        </div>
+    -->
+    <h1
+        class="text-3xl md:text-5xl font-bold uppercase text-center md:text-left tracking-wide"
+    >
+        {title}
+    </h1>
+</div>
